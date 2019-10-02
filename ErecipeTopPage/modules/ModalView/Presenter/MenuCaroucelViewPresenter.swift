@@ -13,7 +13,7 @@ protocol MenuCarouselViewPresenterProtocol {
 }
 
 final class MenuCarouselViewPresenter {
-    
+    // こみっとてすとおおお
 }
 
 extension MenuCarouselViewPresenter: MenuCarouselViewPresenterProtocol {
