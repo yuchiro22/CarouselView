@@ -15,6 +15,10 @@
 		50D5CA0423419037003FC185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D5CA0223419037003FC185 /* LaunchScreen.storyboard */; };
 		50D5CA0F23419038003FC185 /* ErecipeTopPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA0E23419038003FC185 /* ErecipeTopPageTests.swift */; };
 		50D5CA1A23419038003FC185 /* ErecipeTopPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA1923419038003FC185 /* ErecipeTopPageUITests.swift */; };
+		50D5CA2823449BE1003FC185 /* MenuCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA2723449BE1003FC185 /* MenuCarouselView.swift */; };
+		50D5CA2A23449CE3003FC185 /* MenuCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA2923449CE3003FC185 /* MenuCarouselCell.swift */; };
+		50D5CA2C2344A4F3003FC185 /* PagingPerCellFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA2B2344A4F3003FC185 /* PagingPerCellFlowLayout.swift */; };
+		50D5CA322344B32C003FC185 /* MenuCaroucelViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5CA312344B32C003FC185 /* MenuCaroucelViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		50D5CA1523419038003FC185 /* ErecipeTopPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErecipeTopPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D5CA1923419038003FC185 /* ErecipeTopPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErecipeTopPageUITests.swift; sourceTree = "<group>"; };
 		50D5CA1B23419038003FC185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D5CA2723449BE1003FC185 /* MenuCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCarouselView.swift; sourceTree = "<group>"; };
+		50D5CA2923449CE3003FC185 /* MenuCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCarouselCell.swift; sourceTree = "<group>"; };
+		50D5CA2B2344A4F3003FC185 /* PagingPerCellFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingPerCellFlowLayout.swift; sourceTree = "<group>"; };
+		50D5CA312344B32C003FC185 /* MenuCaroucelViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCaroucelViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,9 @@
 		50D5C9F623419035003FC185 /* ErecipeTopPage */ = {
 			isa = PBXGroup;
 			children = (
+				50D5CA2D2344B10E003FC185 /* modules */,
 				50D5C9F723419035003FC185 /* AppDelegate.swift */,
 				50D5C9F923419035003FC185 /* SceneDelegate.swift */,
-				50D5C9FB23419035003FC185 /* ViewController.swift */,
-				50D5C9FD23419035003FC185 /* Main.storyboard */,
 				50D5CA0023419037003FC185 /* Assets.xcassets */,
 				50D5CA0223419037003FC185 /* LaunchScreen.storyboard */,
 				50D5CA0523419037003FC185 /* Info.plist */,
@@ -126,6 +133,43 @@
 				50D5CA1B23419038003FC185 /* Info.plist */,
 			);
 			path = ErecipeTopPageUITests;
+			sourceTree = "<group>";
+		};
+		50D5CA2D2344B10E003FC185 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				50D5CA2F2344B21C003FC185 /* ModalView */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		50D5CA2E2344B116003FC185 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50D5CA2B2344A4F3003FC185 /* PagingPerCellFlowLayout.swift */,
+				50D5CA2923449CE3003FC185 /* MenuCarouselCell.swift */,
+				50D5CA2723449BE1003FC185 /* MenuCarouselView.swift */,
+				50D5C9FB23419035003FC185 /* ViewController.swift */,
+				50D5C9FD23419035003FC185 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50D5CA2F2344B21C003FC185 /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				50D5CA302344B310003FC185 /* Presenter */,
+				50D5CA2E2344B116003FC185 /* View */,
+			);
+			path = ModalView;
+			sourceTree = "<group>";
+		};
+		50D5CA302344B310003FC185 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50D5CA312344B32C003FC185 /* MenuCaroucelViewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D5CA2A23449CE3003FC185 /* MenuCarouselCell.swift in Sources */,
+				50D5CA322344B32C003FC185 /* MenuCaroucelViewPresenter.swift in Sources */,
+				50D5CA2C2344A4F3003FC185 /* PagingPerCellFlowLayout.swift in Sources */,
 				50D5C9FC23419035003FC185 /* ViewController.swift in Sources */,
 				50D5C9F823419035003FC185 /* AppDelegate.swift in Sources */,
 				50D5C9FA23419035003FC185 /* SceneDelegate.swift in Sources */,
+				50D5CA2823449BE1003FC185 /* MenuCarouselView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
